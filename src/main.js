@@ -71,3 +71,7 @@ menuToogle.addEventListener('click', () => {
   aside.classList.remove('hideElement');
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
