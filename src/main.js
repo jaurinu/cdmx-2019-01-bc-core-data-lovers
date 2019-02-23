@@ -1,4 +1,14 @@
 
+//Constantes del DOM//
+const initialPage = document.getElementById('initial-page');
+const vehiclePage = document.getElementById('vehicle-page');
+const yearPage = document.getElementById('year-page');
+const allYearPage = document.getElementById('all-year-page');
+
+//Constantes botones página inicial//
+
+
+
 
 const printData = document.getElementById('print-data');
 const injuriesData='./data/injuries/injuries.json';
