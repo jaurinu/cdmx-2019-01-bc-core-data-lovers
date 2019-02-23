@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.hideElement {
+    display: none;
+}
+
+/*naranja #F14B21
+azul #1B76CF
+verde #55E0B7
+rosa #E658AA
+morado #734399
+azul texto #2165BA
+letra gris #5A5A5A
+gris fondo #D5D5D5
+gris claro fondo #f6f6f6*/ 
+
+body{
+    background-color: #f6f6f6;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+h1{
+    color: #2165BA;
+}
+
+h2{
+    color: #5A5A5A;
+}

@@ -1,8 +1,18 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+window.injuries = {
 
-const example = () => {
-  return 'example';
+  indicatorInjuries: (responseJson)=>{
+    console.log(responseJson);
+    const arrMot=[];
+    responseJson.forEach(element => {
+      let motorcyclists= element.Total_Injured_Persons_Motorcyclists;
+      let year=element.Year;
+      arrMot.push({motorcyclists, year});
+    });
+    return arrMot;
+  }
+
+
+
+
+
 };
-
-window.example = example;
