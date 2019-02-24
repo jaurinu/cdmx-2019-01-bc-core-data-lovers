@@ -64,6 +64,7 @@ return response.json();
 // .then(responseJson=>window.injuries.justFiveYears(responseJson))
 .then(responseJson=>{
     console.log(responseJson);
+    
     return window.injuries.indicatorInjuries(responseJson)
 })
 .then(arrMotResp => printMot(arrMotResp))
