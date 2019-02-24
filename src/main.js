@@ -16,10 +16,11 @@ const pedestrianButton = document.getElementById('pedestrian-button');
 const oneYearButton = document.getElementById('one-year-button');
 const allYearButton = document.getElementById('all-year-button');
 
-//Constantes páginas//
-
-const printData = document.getElementById('print-data');
+//Constante fetch data//
 const injuriesData='./data/injuries/injuries.json';
+
+//Constantes funciones imprimir//
+const printData = document.getElementById('print-data');
 const printMotorcyclists=document.getElementById('print-motorcyclists');
 
 //Eventos de páginas//
@@ -57,17 +58,20 @@ allYearButton.addEventListener('click', ()=>{
 
 fetch(injuriesData)
 .then((response)=>{
+console.log(response);
 return response.json();
 })
+// .then(responseJson=>window.injuries.justFiveYears(responseJson))
 .then(responseJson=>{
+    console.log(responseJson);
     return window.injuries.indicatorInjuries(responseJson)
-    
 })
 .then(arrMotResp => printMot(arrMotResp))
 
 .catch((error)=>{
-    console.log('hubo un problema'+error.message);
+    console.info('hubo un problema '+error.message);
 });
+
 
 
 const printMot=(arrMotResp) =>{
