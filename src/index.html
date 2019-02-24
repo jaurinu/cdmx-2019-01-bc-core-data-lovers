@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,28 +14,40 @@
   <header>
       <h1>PRIMERO SEGURIDAD</h1> 
       <h2>Te queremos a salvo</h2>
+      
      </header>
     
      <main>
-     <section class="initial-page">
-    
-     </section>
+     <section id="initial-page">
+       
+        <a href="#" id="motorcycle-button" class="hexagon-button"><img src="./assets/Hexagono_naranja.png" alt="Hexagono_naranja"><i class="fas fa-motorcycle"></i></a>
+        <a href="#" id="bicycle-button" class="hexagon-button"><img src="./assets/Hexagono_azul.png" alt="Hexagono_azul"><i class="fas fa-bicycle"></i></a>
+        <a href="#" id="car-button" class="hexagon-button"><img src="./assets/Hexagono_amarillo.png" alt="Hexagono_amarillo"><i class="fas fa-car"></i></a>
+        <a href="#" id="pedestrian-button" class="hexagon-button"><img src="./assets/Hexagono_verde.png" alt="Hexagono_verde"><i class="fas fa-walking"></i></a>
+        <a href="#" id="one-year-button" class="hexagon-button"><img src="./assets/Hexagono_rosa.png" alt="Hexagono_rosa">Years</a>
+        <a href="#" id="all-year-button" class="hexagon-button"><img src="./assets/Hexagono_morado.png" alt="Hexagono_morado">all years</a>      
+     </section> <!--termina initial-page-->
 
   <section class="vehicle-page">
-      <h2>Total motociclistas heridos<h2p>
-          <div id='print-motorcyclists'>
-            <p>Año: 2000 - <span>Total</span> </p>
-          </div>
-  </section>
+    <section id="moto-page" class="hidePage">
+        <h2>Total motociclistas heridos<h2p>
+            <div id='print-motorcyclists'>
+              <p>Año: 2000 - <span>Total</span> </p>
+            </div>
+    </section> <!--termina moto-page-->
+    <section id="bicycle-page" class="hidePage"></section> <!--termina bicycle-page-->
+    <section id="car-page" class="hidePage"></section> <!--termina car-page-->
+    <section id="pedestrian-page" class="hidePage"></section> <!--termina pedestrian-page-->
+  </section> <!--termina vehicle-page-->
 
-  <section class="year-page">
+  <section id="year-page" class="hidePage">
 
-    </section>
+  </section> <!--termina year-page-->
     
-    <section class="all-year-page">
+  <section id="all-year-page" class="hidePage">
     
-    </section>
-    </main>
+  </section> <!--termina all-year-page-->
+  </main>
     
 
 
