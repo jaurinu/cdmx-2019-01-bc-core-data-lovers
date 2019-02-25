@@ -20,10 +20,10 @@
      <main>
      <section id="initial-page">
        
-        <a href="#" id="motorcycle-button" class="hexagon-button"><img src="./assets/Hexagono_naranja.png" alt="Hexagono_naranja"><i class="fas fa-motorcycle"></i></a>
-        <a href="#" id="bicycle-button" class="hexagon-button"><img src="./assets/Hexagono_azul.png" alt="Hexagono_azul"><i class="fas fa-bicycle"></i></a>
-        <a href="#" id="car-button" class="hexagon-button"><img src="./assets/Hexagono_amarillo.png" alt="Hexagono_amarillo"><i class="fas fa-car"></i></a>
-        <a href="#" id="pedestrian-button" class="hexagon-button"><img src="./assets/Hexagono_verde.png" alt="Hexagono_verde"><i class="fas fa-walking"></i></a>
+        <a href="#" id="motorcyclists-button" class="hexagon-button"><img src="./assets/Hexagono_naranja.png" alt="Hexagono_naranja"><i class="fas fa-motorcycle"></i></a>
+        <a href="#" id="pedalcyclist-button" class="hexagon-button"><img src="./assets/Hexagono_azul.png" alt="Hexagono_azul"><i class="fas fa-bicycle"></i></a>
+        <a href="#" id="carOccupant-button" class="hexagon-button"><img src="./assets/Hexagono_amarillo.png" alt="Hexagono_amarillo"><i class="fas fa-car"></i></a>
+        <a href="#" id="pedestrians-button" class="hexagon-button"><img src="./assets/Hexagono_verde.png" alt="Hexagono_verde"><i class="fas fa-walking"></i></a>
         <a href="#" id="one-year-button" class="hexagon-button"><img src="./assets/Hexagono_rosa.png" alt="Hexagono_rosa">Years</a>
         <a href="#" id="all-year-button" class="hexagon-button"><img src="./assets/Hexagono_morado.png" alt="Hexagono_morado">all years</a>      
      </section> <!--termina initial-page-->
@@ -32,12 +32,30 @@
     <section id="moto-page" class="hidePage">
         <h3>Total <span>motociclistas </span>heridos<h3>
             <div id='print-motorcyclists'>
-              <p>Año   - <span>Total</span> </p>
+              <p>Año        -<span>  Total   </span> </p>
             </div>
     </section> <!--termina moto-page-->
-    <section id="bicycle-page" class="hidePage"></section> <!--termina bicycle-page-->
-    <section id="car-page" class="hidePage"></section> <!--termina car-page-->
-    <section id="pedestrian-page" class="hidePage"></section> <!--termina pedestrian-page-->
+    <section id="bicycle-page" class="hidePage">
+       <h3>Total <span>ciclistas </span>heridos<h3>
+        <div id='print-pedalcyclists'>
+          <p>Año        -<span>  Total   </span> </p>
+        </div>
+    </section> <!--termina bicycle-page-->
+    <section id="car-page" class="hidePage">
+      <h3>Total <span>automovilistas </span>heridos<h3>
+        <div id='print-car-occupant'>
+          <p>Año        -<span>  Total   </span> </p>
+        </div>
+    </section> <!--termina car-page-->
+    <section id="pedestrian-page" class="hidePage">
+      <h3>Total <span>peatones </span>heridos<h3>
+        <div id='print-pedestrians'>
+          <p>Año        -<span>  Total   </span> </p>
+        </div>
+    </section> <!--termina pedestrian-page-->
+    <div>
+    <button id='sort-button' class="sort-button">Ordenar > </button>
+  </div>
   </section> <!--termina vehicle-page-->
 
   <section id="year-page" class="hidePage">

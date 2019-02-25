@@ -9,10 +9,10 @@ const yearPage = document.getElementById('year-page');
 const allYearPage = document.getElementById('all-year-page');
 
 //Constantes botones página inicial//
-const motorcycleButton = document.getElementById('motorcycle-button');
-const bicycleButton = document.getElementById('bicycle-button');
-const carButton = document.getElementById('car-button');
-const pedestrianButton = document.getElementById('pedestrian-button');
+const motorcyclistsButton = document.getElementById('motorcyclists-button');
+const pedalcyclistButton = document.getElementById('pedalcyclist-button');
+const carOccupantButton = document.getElementById('carOccupant-button');
+const pedestriansButton = document.getElementById('pedestrians-button');
 const oneYearButton = document.getElementById('one-year-button');
 const allYearButton = document.getElementById('all-year-button');
 const hexagonButton = document.getElementsByClassName('hexagon-button');
@@ -23,24 +23,27 @@ const injuriesData='./data/injuries/injuries.json';
 //Constantes funciones imprimir//
 const printData = document.getElementById('print-data');
 const printMotorcyclists=document.getElementById('print-motorcyclists');
+const printPedalcyclists=document.getElementById('print-pedalcyclists');
+const printCarOccupant=document.getElementById('print-car-occupant');
+const printPedestrians=document.getElementById('print-pedestrians');
 
 //Eventos de páginas//
-motorcycleButton.addEventListener('click', ()=>{
+motorcyclistsButton.addEventListener('click', ()=>{
     initialPage.classList.add('hidePage');
     motoPage.classList.remove('hidePage');
 });
 
-bicycleButton.addEventListener('click', ()=>{
+pedalcyclistButton.addEventListener('click', ()=>{
     initialPage.classList.add('hidePage');
     bicyclePage.classList.remove('hidePage');
 });
 
-carButton.addEventListener('click', ()=>{
+carOccupantButton.addEventListener('click', ()=>{
     initialPage.classList.add('hidePage');
     carPage.classList.remove('hidePage');
 });
 
-pedestrianButton.addEventListener('click', ()=>{
+pedestriansButton.addEventListener('click', ()=>{
     initialPage.classList.add('hidePage');
     pedestrianPage.classList.remove('hidePage');
 });
@@ -73,42 +76,50 @@ return window.injuries.indicatorInjuries(justFiveYears)})
     
 //     return window.injuries.indicatorInjuries(responseJson)
 // })
-.then(arrMotResp => printMot(arrMotResp))
+.then(newArrayInjuriesResp =>{console.log(newArrayInjuriesResp);
+    return printMot(newArrayInjuriesResp)})
 
 .catch((error)=>{
     console.info('hubo un problema '+error.message);
 });
 
-// const chosenButton=hexagonButton.addEventListener('click',()=>{
-//     hexagonButton.forEach(element=>{
-//         console.log(element)
-//     (element.id)
-//     console.log(element.id);
-//     });
-// })
-//--------------por que for each no es una funcion?----------//
-// const chosenButton='';
-// chosenButton=hexagonButton.forEach(elemento=> {
-//     console.log(elemento)
-//     let idbutton=elemento.id;
-//     console.log(idbutton);
-// });
 
-//--------------este for si funciona----------//
-// for (let i=0; i<hexagonButton.length; i++){
-//     hexagonButton[i].addEventListener('click',()=>{
-//         const chosenButton=hexagonButton[i].id;
-//         console.log(chosenButton);
-//     })
-// }   
-//--------------imprime -----------------//
-// const printMot=(arrMotResp) =>{
-//     arrMotResp.forEach(element => {
-//         const printP=`<p>Año: ${element.year} - <span>${element.motorcyclists}</span> </p>`
-//         printMotorcyclists.insertAdjacentHTML('beforeend', printP)
-//     });
-     
-//     }
+
+//---------------------imprime-------------------------//
+let printMot=(newArrayInjuriesResp) =>{
+
+//--------------Conocer el botón seleccionado----------//
+    for (let i=0; i<hexagonButton.length; i++){
+        hexagonButton[i].addEventListener('click',()=>{
+            let chosenButton=hexagonButton[i].id;
+            console.log(chosenButton);
+
+//--------------Conocer el botón seleccionado----------//
+             newArrayInjuriesResp.forEach(element => {
+                let newYear=new Date(element.year).getFullYear()
+               
+                if (chosenButton ==='motorcyclists-button'){
+                    const printP=`<p> ${newYear} - <span>${element.motorcyclists}</span> </p>`
+                    printMotorcyclists.insertAdjacentHTML('beforeend', printP);
+                    
+        
+                }else if (chosenButton==='pedalcyclist-button'){
+                    const printP=`<p> ${newYear} - <span>${element.pedalcyclists}</span> </p>`
+                    printPedalcyclists.insertAdjacentHTML('beforeend', printP);
+                  
+                }else if (chosenButton==='carOccupant-button'){
+                    const printP=`<p> ${newYear} - <span>${element.carOccupant}</span> </p>`
+                    printCarOccupant.insertAdjacentHTML('beforeend', printP);
+                  
+                }else if (chosenButton==='pedestrians-button'){
+                    const printP=`<p> ${newYear} - <span>${element.pedestrians}</span> </p>`
+                    printPedestrians.insertAdjacentHTML('beforeend', printP);
+                }
+            });
+        })
+    }   
+  
+    }
 
 
 
