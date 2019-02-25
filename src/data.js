@@ -39,10 +39,36 @@ indicatorInjuries: (justFiveYears)=>{
       });
       console.log(newArrayInjuries)
       return newArrayInjuries;
+    },
+
 
 //-------------------termina intento filtrado con for each---------------//
 
 //-----------------------------------------------------------------------//
+
+orderHighestLowest: (year, totalinjuries)=>{
+
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //-----------------funciona pero intentare solo con for each------------//
     //-------------filtra por total injured persons motorcyclists-------------//
@@ -60,8 +86,8 @@ indicatorInjuries: (justFiveYears)=>{
     
   // }
   
-  },
-
+  
+//-------------------------funcion con Jonh-------------//
   // indicatorInjuries: (justFiveYears, chosenButton)=>{
   //   console.log(justFiveYears);
   //   const arrMot=[];
@@ -80,7 +106,7 @@ indicatorInjuries: (justFiveYears)=>{
 
 
 
-};
+
 
 
   // const arrFiveYears=[];
@@ -102,3 +128,4 @@ indicatorInjuries: (justFiveYears)=>{
 // const justFiveYears=arrYears.filter(year=>year>=('2013-01-04'));
 // console.log(justFiveYears);
 //------------------------probando filtro que traiga todo el elemento--------//
+}

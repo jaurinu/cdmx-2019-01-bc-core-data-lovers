@@ -16,6 +16,7 @@ const pedestriansButton = document.getElementById('pedestrians-button');
 const oneYearButton = document.getElementById('one-year-button');
 const allYearButton = document.getElementById('all-year-button');
 const hexagonButton = document.getElementsByClassName('hexagon-button');
+const sortButton = document.getElementById('sort-button');
 
 //Constante fetch data//
 const injuriesData='./data/injuries/injuries.json';
@@ -59,7 +60,7 @@ allYearButton.addEventListener('click', ()=>{
 });
 
 //Fetch//
-const data=window.injuries
+//const data=window.injuries
 fetch(injuriesData)
 .then((response)=>{
 console.log(response);
@@ -68,16 +69,9 @@ return response.json();
 .then(responseJson=>window.injuries.justFiveYears(responseJson))
 .then(justFiveYears => {console.log(justFiveYears);
 return window.injuries.indicatorInjuries(justFiveYears)})
-
-
-
-// .then(responseJson=>{
-//     console.log(responseJson);
-    
-//     return window.injuries.indicatorInjuries(responseJson)
-// })
 .then(newArrayInjuriesResp =>{console.log(newArrayInjuriesResp);
-    return printMot(newArrayInjuriesResp)})
+    return printResult(newArrayInjuriesResp)})
+.then(sortTotalInjuries =>window.injuries.sortTotalInjuries(sortTotalInjuries))
 
 .catch((error)=>{
     console.info('hubo un problema '+error.message);
@@ -86,22 +80,22 @@ return window.injuries.indicatorInjuries(justFiveYears)})
 
 
 //---------------------imprime-------------------------//
-let printMot=(newArrayInjuriesResp) =>{
-
+let printResult=(newArrayInjuriesResp) =>{
+    
 //--------------Conocer el botón seleccionado----------//
     for (let i=0; i<hexagonButton.length; i++){
         hexagonButton[i].addEventListener('click',()=>{
             let chosenButton=hexagonButton[i].id;
             console.log(chosenButton);
 
-//--------------Conocer el botón seleccionado----------//
+//--------------Imprime los elementos seleccionados----------//
              newArrayInjuriesResp.forEach(element => {
                 let newYear=new Date(element.year).getFullYear()
                
                 if (chosenButton ==='motorcyclists-button'){
                     const printP=`<p> ${newYear} - <span>${element.motorcyclists}</span> </p>`
                     printMotorcyclists.insertAdjacentHTML('beforeend', printP);
-                    
+                   
         
                 }else if (chosenButton==='pedalcyclist-button'){
                     const printP=`<p> ${newYear} - <span>${element.pedalcyclists}</span> </p>`
@@ -116,6 +110,10 @@ let printMot=(newArrayInjuriesResp) =>{
                     printPedestrians.insertAdjacentHTML('beforeend', printP);
                 }
             });
+            sortButton.addEventListener('click', ()=>{
+                console.log('funciono')
+                window.injuries.orderHighestLowest(newArrayInjuriesResp)
+            })
         })
     }   
   
