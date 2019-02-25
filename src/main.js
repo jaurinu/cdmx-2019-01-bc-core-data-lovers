@@ -15,6 +15,7 @@ const carButton = document.getElementById('car-button');
 const pedestrianButton = document.getElementById('pedestrian-button');
 const oneYearButton = document.getElementById('one-year-button');
 const allYearButton = document.getElementById('all-year-button');
+const hexagonButton = document.getElementsByClassName('hexagon-button');
 
 //Constante fetch data//
 const injuriesData='./data/injuries/injuries.json';
@@ -55,33 +56,59 @@ allYearButton.addEventListener('click', ()=>{
 });
 
 //Fetch//
-
+const data=window.injuries
 fetch(injuriesData)
 .then((response)=>{
 console.log(response);
 return response.json();
 })
-// .then(responseJson=>window.injuries.justFiveYears(responseJson))
-.then(responseJson=>{
-    console.log(responseJson);
+.then(responseJson=>window.injuries.justFiveYears(responseJson))
+.then(justFiveYears => {console.log(justFiveYears);
+return window.injuries.indicatorInjuries(justFiveYears)})
+
+
+
+// .then(responseJson=>{
+//     console.log(responseJson);
     
-    return window.injuries.indicatorInjuries(responseJson)
-})
+//     return window.injuries.indicatorInjuries(responseJson)
+// })
 .then(arrMotResp => printMot(arrMotResp))
 
 .catch((error)=>{
     console.info('hubo un problema '+error.message);
 });
 
+// const chosenButton=hexagonButton.addEventListener('click',()=>{
+//     hexagonButton.forEach(element=>{
+//         console.log(element)
+//     (element.id)
+//     console.log(element.id);
+//     });
+// })
+//--------------por que for each no es una funcion?----------//
+// const chosenButton='';
+// chosenButton=hexagonButton.forEach(elemento=> {
+//     console.log(elemento)
+//     let idbutton=elemento.id;
+//     console.log(idbutton);
+// });
 
-
-const printMot=(arrMotResp) =>{
-    arrMotResp.forEach(element => {
-        const printP=`<p>Año: ${element.year} - <span>${element.motorcyclists}</span> </p>`
-        printMotorcyclists.insertAdjacentHTML('beforeend', printP)
-    });
+//--------------este for si funciona----------//
+// for (let i=0; i<hexagonButton.length; i++){
+//     hexagonButton[i].addEventListener('click',()=>{
+//         const chosenButton=hexagonButton[i].id;
+//         console.log(chosenButton);
+//     })
+// }   
+//--------------imprime -----------------//
+// const printMot=(arrMotResp) =>{
+//     arrMotResp.forEach(element => {
+//         const printP=`<p>Año: ${element.year} - <span>${element.motorcyclists}</span> </p>`
+//         printMotorcyclists.insertAdjacentHTML('beforeend', printP)
+//     });
      
-    }
+//     }
 
 
 
