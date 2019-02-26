@@ -54,10 +54,22 @@ h3{
 }
 
 .hexagon-button{
+    
    width: 200px;
    margin: 30px auto;
    display: block;
 }
+i {
+    width: 200px;
+    height: auto;
+    font-size:150px;
+    border-radius: 3px;
+    color: #003471;
+    text-align: center;
+    float: right;
+    margin: 0 2px;
+    padding: 5px;
+  }
 
 .sort-button {
     background: #D5D5D5;
