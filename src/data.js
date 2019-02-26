@@ -28,7 +28,6 @@ window.injuries = {
       // sortTotalInjuries: (sortTotalInjuriesResult) => {
       //   const orderInjuries = newArrayInjuries
   
-        
       // }
     
      

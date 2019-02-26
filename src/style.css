@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Allerta');
 *{
     margin: 0;
     padding: 0;
@@ -11,25 +12,15 @@
     display: none;
 }
 
-/*naranja #F14B21
-azul #1B76CF
-verde #55E0B7
-rosa #E658AA
-morado #734399
-azul texto #2165BA
-letra gris #5A5A5A
-gris fondo #D5D5D5
-gris claro fondo #f6f6f6*/ 
-
 body{
-    background-color: #f6f6f6;
+    background-color: #D5D5D5;
     font-family: 'Lato', sans-serif;
 }
 
 header{
-    background-color: #1B76CF;
+    
     margin: 0 0 80px;
-    padding: 30px;
+    padding: 40px;
 }
 
 h1, h2, h3{
@@ -38,10 +29,11 @@ h1, h2, h3{
 }
 
 h1, h2{
-    color: whitesmoke;
+    color:#2165BA;
 }
 h1{
-    font-size: 55px;
+    font-family: 'Allerta', sans-serif;
+    font-size: 60px;
 }
 
 h2{
@@ -49,38 +41,129 @@ h2{
 }
 
 h3{
-    font-size: 35px;
-    color: #5A5A5A;
+    font-size: 25px;
+    color: #003471;;
 }
+
+i {
+   
+    color: #003471;
+    font-size: 150px;
+    text-align: center;
+    display: block;
+    margin: 0 2px;
+    padding: 40px ;
+  }
+
+  .fa,.fab,.fal,.far,.fas {
+      display: block;
+  }
 
 .hexagon-button{
     
-   width: 200px;
-   margin: 30px auto;
-   display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    margin: 110px 117px;
+    display: block;
+ }
+ /*naranja #F14B21
+azul #1B76CF
+verde #55E0B7
+rosa #E658AA
+morado #734399
+azul texto #2165BA
+letra gris #5A5A5A
+gris fondo #D5D5D5
+gris claro fondo #f6f6f6*/
+.green{
+    background-color: #8EC007;  
 }
-i {
-    width: 200px;
-    height: auto;
-    font-size:150px;
-    border-radius: 3px;
-    color: #003471;
-    text-align: center;
-    float: right;
-    margin: 0 2px;
-    padding: 5px;
-  }
+.orange{
+    background-color:#FF9400;  
+}
+.blue{
+    background-color:#059FC3;  
+}
+.pink{
+    background-color:#E658AA;  
+}
 
-.sort-button {
-    background: #D5D5D5;
-    border: none;
-    width: 37%;
-    border-radius: 10px;
-    margin: 2% 4%;
-    padding: 2%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+.titulo-green, .titulo-orange,
+.titulo-blue, .titulo-pink {
+   
+    color:  #003471;
     font-weight: bold;
-    color: #003471;
-    display: inline-block;
-  }
+    padding: 30px;
+}
+
+.titulo-green{
+    background-color: #8EC007;
+}
+.titulo-orange{
+    background-color: #FF9400;
+}
+.titulo-blue{
+    background-color: #059FC3;
+}
+.titulo-pink{
+    background-color:#E658AA;
+}
+
+.tabla{
+    text-align: center;
+}
+.promedio-green, .promedio-blue,
+.promedio-orange,
+.promedio-pink{
+    width: 500px;
+    color:  #003471;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.promedio-green{
+    background-color: rgba(143, 192, 7, 0.432);
+}
+.promedio-orange{
+    background-color: rgba(255, 149, 0, 0.438);
+}
+.promedio-blue{
+    background-color:rgba(5, 160, 195, 0.432);
+}
+.promedio-pink{
+    background-color: rgba(230, 88, 171, 0.432);
+}
+
+
+.moto-align, .bici-align,
+.car-align, .pedestrian-align{
+    text-align: center;
+}
+
+
+.tips-green, .tips-blue,
+.tips-orange, .tips-pink{
+    width: 621px;
+    border-radius: 41px;
+    font-size: 44px;
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+}
+
+.tips-green{
+background-color: rgba(143, 192, 7, 0.432);
+}
+.tips-blue{
+    background-color:rgba(5, 160, 195, 0.425);
+}
+
+.tips-orange{
+    background-color: rgba(255, 149, 0, 0.432);
+}
+ .tips-pink{
+    background-color: rgba(230, 88, 171, 0.459);
+   
+}

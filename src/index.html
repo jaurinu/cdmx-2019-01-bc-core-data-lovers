@@ -5,75 +5,135 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
 </head>
 
 <body>
   <div id="root"></div>
 
   <header>
-      <h1>PRIMERO SEGURIDAD</h1> 
-      <h2>Te queremos a salvo</h2>
-      
-     </header>
-    
-     <main>
-     <section id="initial-page">
-       
-        <a href="#" id="motorcyclists" class="hexagon-button"><img src="./assets/Hexagono_naranja.png" alt="Hexagono_naranja"><i class="fas fa-motorcycle"></i></a>
-        <a href="#" id="pedalcyclists" class="hexagon-button"><img src="./assets/Hexagono_azul.png" alt="Hexagono_azul"><i class="fas fa-bicycle"></i></a>
-        <a href="#" id="carOccupant" class="hexagon-button"><img src="./assets/Hexagono_amarillo.png" alt="Hexagono_amarillo"><i class="fas fa-car"></i></a>
-        <a href="#" id="pedestrians" class="hexagon-button"><img src="./assets/Hexagono_verde.png" alt="Hexagono_verde"><i class="fas fa-walking"></i></a>
-        <a href="#" id="one-year" class="hexagon-button"><img src="./assets/Hexagono_rosa.png" alt="Hexagono_rosa">Years</a>
-        <a href="#" id="all-year" class="hexagon-button"><img src="./assets/Hexagono_morado.png" alt="Hexagono_morado">all years</a>      
-     </section> <!--termina initial-page-->
+    <h1>PRIMERO SEGURIDAD</h1>
+    <h2>Te queremos a salvo</h2>
 
-  <section class="vehicle-page">
-    <section id="moto-page" class="hidePage">
-        <h3>Total <span>motociclistas </span>heridos<h3>
-            <div id='print-motorcyclists'>
-              <p>Año        -<span>  Total   </span> </p>
-            </div>
-            <p>Promedio de motociclistas heridos en 5 años es de <span id="average-moto-injuries"></span></p>
-    </section> <!--termina moto-page-->
-    <section id="bicycle-page" class="hidePage">
-       <h3>Total <span>ciclistas </span>heridos<h3>
+  </header>
+
+  <main>
+    <section id="initial-page">
+      <a href="#" id="motorcyclists" class="hexagon-button green"><i class="fas fa-motorcycle"></i></a>
+      <a href="#" id="pedalcyclists" class="hexagon-button orange"><i class="fas fa-bicycle"></i></a>
+      <a href="#" id="carOccupant" class="hexagon-button blue"><i class="fas fa-car"></i></a>
+      <a href="#" id="pedestrians" class="hexagon-button pink"><i class="fas fa-walking"></i></a>
+      <!--
+        <a href="#" id="one-year" class="hexagon-button pink"><img src="./assets/Hexagono_rosa.png" alt="Hexagono_rosa">Years</a>
+        <a href="#" id="all-year" class="hexagon-button purple"><img src="./assets/Hexagono_morado.png" alt="Hexagono_morado">all years</a>  -->
+    </section>
+    <!--termina initial-page-->
+
+    <section class="vehicle-page">
+      <section id="moto-page" class="hidePage">
+        <div class="titulo-green">
+          <h3>Total <span>motociclistas </span>heridos<h3>
+        </div>
+        <div id='print-motorcyclists'>
+          <p class="tabla">Año -<span> Total </span> </p>
+        </div>
+        <div class="promedio-green">
+          <p>Promedio de motociclistas heridos en 5 años es de <span id="average-moto-injuries"></span></p>
+        </div>
+        <div class="moto-align">
+          <i class="fas fa-motorcycle "></i>
+        </div>
+        <div class="moto-align">
+          <h4 class="tips-green">01. Usa siempre el casco</h4>
+          <h4 class="tips-green">02. Conoce los límites de tu motocicleta</h4>
+          <h4 class="tips-green">03. Cuida tu velocidad</h4>
+          <h4 class="tips-green">04. Guarda tu distancia</h4>
+          <h4 class="tips-green">05. Usa los dos frenos</h4>
+        </div>
+      </section>
+      <!--termina moto-page-->
+      <section id="bicycle-page" class="hidePage">
+        <div class="titulo-orange">
+          <h3>Total <span>ciclistas </span>heridos<h3>
+        </div>
         <div id='print-pedalcyclists'>
-          <p>Año        -<span>  Total   </span> </p>
+          <p class="tabla">Año -<span> Total </span> </p>
         </div>
-        <p>Promedio de ciclistas heridos en 5 años es de <span id="average-cyclist-injuries"></span></p>
-    </section> <!--termina bicycle-page-->
-    <section id="car-page" class="hidePage">
-      <h3>Total <span>automovilistas </span>heridos<h3>
+        <div class="promedio-orange">
+          <p>Promedio de ciclistas heridos en 5 años es de <span id="average-cyclist-injuries"></span></p>
+        </div>
+        <div class="bici-align">
+          <i class="fas fa-bicycle "></i>
+        </div>
+        <div class="bici-align">
+          <h4 class="tips-orange">01. Usa siempre el casco</h4>
+          <h4 class="tips-orange">02. El uso de lentes deportivos puede detener polvo e insectos</h4>
+          <h4 class="tips-orange">03. Ilumina el camino por adelante</h4>
+          <h4 class="tips-orange">04. Usa ropa reflejante</h4>
+          <h4 class="tips-orange">05. Un par de guantes pueden proteger tus manos</h4>
+        </div>
+      </section>
+      <!--termina bicycle-page-->
+      <section id="car-page" class="hidePage">
+        <div class="titulo-blue">
+          <h3>Total <span>automovilistas </span>heridos<h3>
+        </div>
         <div id='print-car-occupant'>
-          <p>Año        -<span>  Total   </span> </p>
+          <p class="tabla">Año -<span> Total </span> </p>
         </div>
-        <p>Promedio de automovilistas heridos en 5 años es de <span id="average-car-injuries"></span></p>
-    </section> <!--termina car-page-->
-    <section id="pedestrian-page" class="hidePage">
-      <h3>Total <span>peatones </span>heridos<h3>
+        <div class="promedio-blue">
+          <p>Promedio de automovilistas heridos en 5 años es de <span id="average-car-injuries"></span></p>
+        </div>
+        <div class="car-align">
+          <i class="fas fa-car"></i>
+        </div>
+        <div class="car-align">
+          <h4 class="tips-blue">01. Utiliza el cinturón de seguridad</h4>
+          <h4 class="tips-blue">02. Ajusta asiento, espejos</h4>
+          <h4 class="tips-blue">03. Cuida tu velocidad</h4>
+          <h4 class="tips-blue">04. Guarda tu distancia</h4>
+          <h4 class="tips-blue">05. Evita el uso de celular</h4>
+        </div>
+      </section>
+      <!--termina car-page-->
+      <section id="pedestrian-page" class="hidePage">
+        <div class="titulo-pink">
+          <h3>Total <span>peatones </span>heridos<h3>
+        </div>
         <div id='print-pedestrians'>
-          <p>Año        -<span>  Total   </span> </p>
+          <p class="tabla">Año -<span> Total </span> </p>
         </div>
-        <p>Promedio de peatones heridos en 5 años es de <span id="average-pedestrian-injuries"></span></p>
-    </section> <!--termina pedestrian-page-->
-    <div>
-    <button id='sort-button' class="sort-button">Ordenar > </button>
-  </div>
-  </section> <!--termina vehicle-page-->
+        <div class="promedio-pink">
+          <p>Promedio de peatones heridos en 5 años es de <span id="average-pedestrian-injuries"></span></p>
+        </div>
+        <div class="pedestrian-align">
+          <i class="fas fa-walking"></i>
+        </div>
+        <div class="pedestrian-align">
+          <h4 class="tips-pink">01. Evita el uso de celular mientras caminas</h4>
+          <h4 class="tips-pink">02. Al atravesar una vía mira hacia ambos lados</h4>
+          <h4 class="tips-pink">03. Camina siempre por la acera</h4>
+          <h4 class="tips-pink">04. Si circulas de noche lleva una linterna o ropa reflejante</h4>
+        </div>
+      </section>
+      <!--termina pedestrian-page-->
+      <div>
+        <!--<button id='sort-button' class="sort-button">Ordenar > </button>-->
+      </div>
+    </section>
+    <!--termina vehicle-page-->
 
-  <section id="year-page" class="hidePage">
+    <section id="year-page" class="hidePage">
 
-  </section> <!--termina year-page-->
-    
-  <section id="all-year-page" class="hidePage">
-    
-  </section> <!--termina all-year-page-->
+    </section>
+    <!--termina year-page-->
+
+    <section id="all-year-page" class="hidePage">
+
+    </section>
+    <!--termina all-year-page-->
   </main>
-    
-
-
-
 
   <!-- <script src="./data/injuries/injuries.js"></script> -->
   <!-- <script src="./data/pokemon/pokemon.js"></script> -->

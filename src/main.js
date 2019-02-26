@@ -52,15 +52,15 @@ pedestrians.addEventListener('click', ()=>{
     pedestrianPage.classList.remove('hidePage');
 });
 
-oneYearButton.addEventListener('click', ()=>{
-    initialPage.classList.add('hidePage');
-    yearPage.classList.remove('hidePage');
-});
+// oneYearButton.addEventListener('click', ()=>{
+//     initialPage.classList.add('hidePage');
+//     yearPage.classList.remove('hidePage');
+// });
 
-allYearButton.addEventListener('click', ()=>{
-    initialPage.classList.add('hidePage');
-    allYearPage.classList.remove('hidePage');
-});
+// allYearButton.addEventListener('click', ()=>{
+//     initialPage.classList.add('hidePage');
+//     allYearPage.classList.remove('hidePage');
+// });
 
 //-----------------------Fetch-------------//
 fetch(injuriesData)
@@ -99,25 +99,25 @@ let printResult=(newArrayInjuriesResp) =>{
        
                     if (chosenButton ==='motorcyclists'){
                         sumInjuries += (element.motorcyclists);
-                        const printP=`<p> ${newYear} - <span>${element.motorcyclists}</span> </p>`
+                        const printP=`<p class='tabla'> ${newYear} - <span>${element.motorcyclists}</span> </p>`
                         printMotorcyclists.insertAdjacentHTML('beforeend', printP);
                         motoArray.push([newYear, element.motorcyclists])
                        
                     }else if (chosenButton==='pedalcyclists'){
                         sumInjuries += (element.pedalcyclists);
-                        const printP=`<p> ${newYear} - <span>${element.pedalcyclists}</span> </p>`
+                        const printP=`<p class='tabla'> ${newYear} - <span>${element.pedalcyclists}</span> </p>`
                         printPedalcyclists.insertAdjacentHTML('beforeend', printP);
                         cyclistArray.push([newYear, element.pedalcyclists])
                       
                     }else if (chosenButton==='carOccupant'){
                         sumInjuries += (element.carOccupant);
-                        const printP=`<p> ${newYear} - <span>${element.carOccupant}</span> </p>`
+                        const printP=`<p class='tabla'> ${newYear} - <span>${element.carOccupant}</span> </p>`
                         printCarOccupant.insertAdjacentHTML('beforeend', printP);
                         carArray.push([newYear, element.carOccupant])
                       
                     }else if (chosenButton==='pedestrians'){
                         sumInjuries += (element.pedestrians);
-                        const printP=`<p> ${newYear} - <span>${element.pedestrians}</span> </p>`
+                        const printP=`<p class='tabla'> ${newYear} - <span>${element.pedestrians}</span> </p>`
                         printPedestrians.insertAdjacentHTML('beforeend', printP);
                         pedestrianArray.push([newYear, element.pedestrians])
                     }
@@ -137,14 +137,14 @@ let printResult=(newArrayInjuriesResp) =>{
         }   
       return newArrayInjuriesResp
         }
-        motoArray.sort
-        sortButton.addEventListener('click', ()=>{
+        // motoArray.sort
+        // sortButton.addEventListener('click', ()=>{
 
-            motoArray.sort()
+        //     motoArray.sort()
 
-            console.log('funciono')
-            // window.injuries.sortTotalInjuries(sortTotalInjuriesResult)
-        })
+        //     console.log('funciono')
+        //     // window.injuries.sortTotalInjuries(sortTotalInjuriesResult)
+        // })
         // sortByName: (data) => {
         //     const orderPokemonName = data.sort((a, b) => {
         //       if (a.name > b.name) {
